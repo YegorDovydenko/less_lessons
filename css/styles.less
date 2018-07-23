@@ -1,0 +1,45 @@
+@mainColor: #f00;
+@subColor: #a3a;
+@mainFont: 20px;
+@minWidth: 300px;
+
+h1, .loh p, .pog .but1{
+	color: @mainColor;
+	font-size: @mainFont;
+}
+h2{
+	color: @subColor;
+}
+h1, h2{
+	margin-left: @mainFont*10.5;
+}
+
+.loh{
+	width: @minWidth*2;
+	p{
+		width: @minWidth;
+		border: 2px solid lighten(@subColor, -20%);
+		padding: @mainFont/2;
+		border-radius: 3px;
+	}
+	a{
+		color: @subColor;
+	}
+}
+.pog {
+	border: 2px solid lighten(@subColor, 20%);
+	border-radius: 10px;
+	padding: @mainFont;
+	.but1{
+		width: @minWidth + 50px;
+		background-color: @mainColor;
+		border: 2px solid darken(@mainColor, 20%);
+		border-radius: 10px;
+	}
+	.but2{
+		width: @minWidth - 50px;
+		background-color: @subColor;
+		border: 5px dashed lighten(@subColor, 20%);
+		border-radius: 5px;
+	}
+}
